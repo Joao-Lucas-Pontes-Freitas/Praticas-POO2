@@ -1,1 +1,1 @@
-# Praticas-POO2
+# Praticas - POO2 - João Lucas Pontes Freitas
