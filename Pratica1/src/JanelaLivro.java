@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class JanelaLivro extends ModeloJanela {
 
@@ -29,6 +30,16 @@ public class JanelaLivro extends ModeloJanela {
 
     public Livro getLivro() {
         return this.livro;
+    }
+
+    public void inserir(ArrayList<Modelo> lista){
+        super.inserir(lista);
+
+        String Autor = campo2.getText();
+        Ano = campo3.getText();
+
+        setLivro(new Livro(Titulo, Autor, Ano));
+        lista.add(getLivro());
     }
 
 }

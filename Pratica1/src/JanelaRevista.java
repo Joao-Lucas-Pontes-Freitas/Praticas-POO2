@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class JanelaRevista extends ModeloJanela {
 
@@ -51,5 +52,17 @@ public class JanelaRevista extends ModeloJanela {
         super.apagar();
         campo4.setText("");
         campo5.setText("");
+    }
+
+    public void inserir(ArrayList<Modelo> lista){
+        super.inserir(lista);
+
+        String Org = campo2.getText();
+        String Vol = campo3.getText();
+        String Nro = campo4.getText();
+        Ano = campo5.getText();
+
+        setRevista(new Revista(Titulo, Ano, Org, Vol, Nro));
+        lista.add(getRevista());
     }
 }

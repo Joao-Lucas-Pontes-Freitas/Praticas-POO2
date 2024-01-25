@@ -1,9 +1,12 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 
 public abstract class ModeloJanela {
 
+    protected String Titulo;
+    protected String Ano;
     protected JFrame tela;
     protected JTextField titulo;
     protected JTextField campo2;
@@ -55,8 +58,10 @@ public abstract class ModeloJanela {
         contentPane.add(bottom, BorderLayout.SOUTH);
     }
 
-    public JPanel meio() {
-        return null;
+    public abstract JPanel meio();
+
+    public void inserir(ArrayList<Modelo> lista){
+        Titulo = titulo.getText();
     }
 
     public void abrir(){
