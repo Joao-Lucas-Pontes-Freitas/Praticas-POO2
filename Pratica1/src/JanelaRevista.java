@@ -1,15 +1,13 @@
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
+import java.util.List;
 
 public class JanelaRevista extends ModeloJanela {
-
     private Revista revista;
-
     protected JTextField campo4;
     protected JTextField campo5;
-    public JanelaRevista() {
-        super("Revistas", "Org.:  ", "Livros");
+    public JanelaRevista(String [] lables, int num_botoes) {
+        super("Revistas", "Org.:  ", lables, num_botoes);
     }
 
     @Override
@@ -54,14 +52,12 @@ public class JanelaRevista extends ModeloJanela {
         campo5.setText("");
     }
 
-    public void inserir(ArrayList<Modelo> lista){
+    public void inserir(List<Modelo> lista){
         super.inserir(lista);
-
         String Org = campo2.getText();
         String Vol = campo3.getText();
         String Nro = campo4.getText();
-        Ano = campo5.getText();
-
+        String Ano = campo5.getText();
         setRevista(new Revista(Titulo, Ano, Org, Vol, Nro));
         lista.add(getRevista());
     }

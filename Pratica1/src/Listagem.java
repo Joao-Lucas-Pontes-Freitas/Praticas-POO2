@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
+import java.util.List;
+
 public class Listagem {
     private final JFrame tela;
     private final JPanel center;
@@ -22,10 +23,10 @@ public class Listagem {
 
     }
 
-    public void mostrarLista(ArrayList<Modelo> lista){
+    public void mostrarLista(List<Modelo> lista){
         center.removeAll();
         StringBuilder l = new StringBuilder();
-        for (Object o : lista) {
+        for (Modelo o : lista) {
             l.append(o.toString()).append("\n");
         }
         JTextArea texto = new JTextArea(l.toString());
